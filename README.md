@@ -2,6 +2,7 @@
 ## 概要
 ・CSVのデータをグラフに変換します.   
 ・Excelでグラフを整形するのが面倒な人は使ってみてください.   
+<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/result.png" alt="result.png" title="表示結果">
 
 ## 使用方法
 ### 1) Pythonを持っている場合
@@ -35,7 +36,12 @@ drive.mount('/content/drive')
 (注意2: フォントがTimes New Romanでは無くなります。)
 
 ## 注意
-・pandasとmatplotlibを使用しているので, Pythonで実行する場合はpandas,matplotlib, numpyの3つのライブラリがインストールされているか確認してください.
+・pandasとmatplotlibを使用しているので, Pythonで実行する場合はpandas,matplotlib, numpyの3つのライブラリがインストールされているか確認してください.   
+・本プログラム内での表以外の部分とは、ヘッダーとフッダーのことを指します.    
+ex. NNCT 3J工学実験実習 オシロスコープデータの場合>>>
+ヘッダー:1-15行目
+フッダー:なし   
+・横軸が共有されたグラフが作成されます.
 ### ライブラリ確認方法
 ```
 pip list //pipの場合

@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 print('【はじめに】Pythonユーザー: csvファイルをこのexeファイルと同じディレクトリに入れてください')
 print('【はじめに】Colaboratoryからの実行: csvファイルをMy Drive直下に入れてください')
-print('【はじめに】csvファイルの1-15行目(表以外の部分)を削除してください\n')
+print('【はじめに】csvファイルの表以外の部分(ヘッダーとフッダー)を削除してください\n')
 print('ファイル名を入力してください.  例) ./hoge.csv  注)./ は必要')
 print('ファイル名: ', end='')
 path = input()
