@@ -1,6 +1,4 @@
 import pandas as pd
-import csv
-import numpy as np
 import matplotlib.pyplot as plt
 
 print('【はじめに】Pythonユーザー: csvファイルをこのexeファイルと同じディレクトリに入れてください')
