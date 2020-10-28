@@ -44,7 +44,7 @@ for i in data_tag:
     if (i == x_tag):
         continue
     else:
-        print('{:s}を横軸, {:s}を縦軸としてグラフを作成しますか? (はい: yes , いいえ: その他のコマンド)'.format(x_tag, i))
+        print('{:s}を横軸, {:s}を縦軸としてグラフを作成しますか? (はい: yes , いいえ: その他のコマンド(何かを入力))'.format(x_tag, i))
         check = input()
         if (check == 'yes'):
             ny.append(df[i])
