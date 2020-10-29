@@ -106,6 +106,52 @@ for i in range(len(y)):
         plt.title(title)
     plt.tick_params(labelbottom=False)
     plt.ylim((-2.5, 7.5))
+    plt.ylabel("Voltage [V]")
+    plt.plot(x, y[i], color = "black")
+plt.tick_params(labelbottom=True)
+plt.xlabel("time [{:s}s]".format(cs[c]))
+
+print('作成完了 保存先: ./result.png')
+plt.savefig('result.png')
+
+plt.figure(figsize = (12, 3*len(y)))
+plt.rcParams["font.family"] = "Times New Roman"
+plt.rcParams["xtick.direction"] = "in"
+plt.rcParams["ytick.direction"] = "in"
+plt.rcParams["xtick.minor.visible"] = True
+plt.rcParams["ytick.minor.visible"] = True
+plt.rcParams["xtick.major.width"] = 1.5
+plt.rcParams["ytick.major.width"] = 1.5
+plt.rcParams["xtick.minor.width"] = 1.0
+plt.rcParams["ytick.minor.width"] = 1.0
+plt.rcParams["xtick.major.size"] = 10
+plt.rcParams["ytick.major.size"] = 10
+plt.rcParams["xtick.minor.size"] = 5
+plt.rcParams["ytick.minor.size"] = 5
+plt.rcParams["font.size"] = 14
+plt.rcParams["axes.linewidth"] = 1.5
+
+for i in range(len(y)):
+    plt.subplot(len(y), 1, i+1)
+    plt.rcParams["font.family"] = "Times New Roman"
+    plt.rcParams["xtick.direction"] = "in"
+    plt.rcParams["ytick.direction"] = "in"
+    plt.rcParams["xtick.minor.visible"] = True
+    plt.rcParams["ytick.minor.visible"] = True
+    plt.rcParams["xtick.major.width"] = 1.5
+    plt.rcParams["ytick.major.width"] = 1.5
+    plt.rcParams["xtick.minor.width"] = 1.0
+    plt.rcParams["ytick.minor.width"] = 1.0
+    plt.rcParams["xtick.major.size"] = 10
+    plt.rcParams["ytick.major.size"] = 10
+    plt.rcParams["xtick.minor.size"] = 5
+    plt.rcParams["ytick.minor.size"] = 5
+    plt.rcParams["font.size"] = 14
+    plt.rcParams["axes.linewidth"] = 1.5
+    if (i == 0):
+        plt.title(title)
+    plt.tick_params(labelbottom=False)
+    plt.ylim((-2.5, 7.5))
     index = 0
     while (y[i][index] < 5):
         index += 1
@@ -128,7 +174,8 @@ for i in range(len(y)):
 plt.tick_params(labelbottom=True)
 plt.xlabel("time [{:s}s]".format(cs[c]))
 
-print('作成完了 保存先: ./result.png')
-plt.savefig('result.png')
+print('作成完了 保存先: ./result2.png')
+plt.savefig('result2.png')
+
 print("Successed!")
 plt.show()

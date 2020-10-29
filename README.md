@@ -1,6 +1,6 @@
 # CSV グラフ化プログラム
 ## リリースノート
-### v2.1 (最新)
+### v2.2 (最新)
 ・4F実験室のオシロスコープ専用にハードコーディングしたものであり、それ以外の.CSVファイルでは動かない   
 ・NNCTの学生はこっちを推奨
 ### v1.1 (推奨)
@@ -26,7 +26,7 @@
 1) Google提供のColaboratoryにアクセス   
 URL: https://colab.research.google.com/notebooks/welcome.ipynb?hl=ja
 2) ファイル--> ノートブックを新規作成   
-<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/blob/master/step1.png" alt="step1.png" title="step1"width="50%" height="50%">
+<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/blob/master/step1.png" alt="step1.png" title="step1"width="100%" height="50%">
 3) 以下のコードを入力して実行
 ```Python
 from google.colab import drive
