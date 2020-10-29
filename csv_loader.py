@@ -100,7 +100,7 @@ for i in range(len(y)):
     plt.rcParams["font.size"] = 14
     plt.rcParams["axes.linewidth"] = 1.5
     plt.ylim((-2.5, 7.5))
-    plt.plot(x, y[i])
+    plt.plot(x, y[i], color = "black")
 plt.tick_params(labelbottom=True)
 
 plt.savefig('result.png')
