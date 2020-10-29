@@ -2,7 +2,7 @@
 ## 概要
 1) CSVのデータをグラフに変換します.   
 2) Excelでグラフを整形するのが面倒な人は使ってみてください.   
-<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/blob/master/result.png" alt="result.png" title="表示結果" width="400px" height="400px">
+<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/blob/master/result.png" alt="result.png" title="表示結果">
 
 ## 使用方法
 ### 1) Pythonを持っている場合
@@ -17,13 +17,17 @@
 0) Googleアカウントを作成
 1) Google提供のColaboratoryにアクセス   
 URL: https://colab.research.google.com/notebooks/welcome.ipynb?hl=ja
-2) ファイル--> ノートブックを新規作成
+2) ファイル--> ノートブックを新規作成   
+<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/blob/master/step1.png" alt="step1.png" title="step1">
 3) 以下のコードを入力して実行
 ```Python
 from google.colab import drive
 drive.mount('/content/drive')
 ```
-4) 表示されたURLに移動して、表示されたコードをURLの下の入力ボックス内にコピーし、Enterキーを押す。
+<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/blob/master/step2.png" alt="step2.png" title="step2">
+
+4) 表示されたURLに移動して、表示されたコードをURLの下の入力ボックス内にコピーし、Enterキーを押す。   
+<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/blob/master/step3.png" alt="step3.png" title="step3">
 
 5) 以下のコードを入力して実行(cd コマンド)
 ```
