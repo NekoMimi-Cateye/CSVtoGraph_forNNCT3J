@@ -2,7 +2,7 @@
 ## 概要
 ・CSVのデータをグラフに変換します.   
 ・Excelでグラフを整形するのが面倒な人は使ってみてください.   
-<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/blob/master/result.png" alt="result.png" title="表示結果" width="60%" height="60%">
+<img src="https://github.com/NekoMimi-Cateye/CSVtoGraph_forNNCT3J/blob/master/result.png" alt="result.png" title="表示結果" width="400px" height="400px">
 
 ## 使用方法
 ### 1) Pythonを持っている場合
