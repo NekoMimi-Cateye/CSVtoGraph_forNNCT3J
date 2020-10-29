@@ -68,7 +68,23 @@ for i in range(len(ny)):
     for j in ny[i]:
         y[i].append(j)
 
-plt.figure(figsize = (12, 2.5*len(y)))
+plt.figure(figsize = (12, 3*len(y)))
+plt.rcParams["font.family"] = "Times New Roman"
+plt.rcParams["xtick.direction"] = "in"
+plt.rcParams["ytick.direction"] = "in"
+plt.rcParams["xtick.minor.visible"] = True
+plt.rcParams["ytick.minor.visible"] = True
+plt.rcParams["xtick.major.width"] = 1.5
+plt.rcParams["ytick.major.width"] = 1.5
+plt.rcParams["xtick.minor.width"] = 1.0
+plt.rcParams["ytick.minor.width"] = 1.0
+plt.rcParams["xtick.major.size"] = 10
+plt.rcParams["ytick.major.size"] = 10
+plt.rcParams["xtick.minor.size"] = 5
+plt.rcParams["ytick.minor.size"] = 5
+plt.rcParams["font.size"] = 14
+plt.rcParams["axes.linewidth"] = 1.5
+
 for i in range(len(y)):
     plt.subplot(len(y), 1, i+1)
     plt.rcParams["font.family"] = "Times New Roman"
@@ -106,7 +122,7 @@ for i in range(len(y)):
         fe += 1
     p1 = plt.vlines([x[fs]], -2.5, 7.5, "black", linestyles='dashed')
     p2 = plt.vlines([x[fe]], -2.5, 7.5, "black", linestyles='dashed')
-    plt.text(x[fe], 6.8, "T={:3.2f}[{:s}s], f={:3.2f}[{:s}Hz]".format(x[fe]-x[fs], cs[c], 1000 / (x[fe]-x[fs]) , cb[c-2]), size=8)
+    plt.text(x[fe], 6, "T={:3.2f}[{:s}s], f={:3.2f}[{:s}Hz]".format(x[fe]-x[fs], cs[c], 1000 / (x[fe]-x[fs]) , cb[c-2]), size=15)
     plt.ylabel("Voltage [V]")
     plt.plot(x, y[i], color = "black")
 plt.tick_params(labelbottom=True)
