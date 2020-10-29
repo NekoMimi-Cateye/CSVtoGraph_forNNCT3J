@@ -111,7 +111,7 @@ for i in range(len(y)):
 plt.tick_params(labelbottom=True)
 plt.xlabel("time [{:s}s]".format(cs[c]))
 
-print('作成完了 保存先: ./result.png')
+print('作成完了 保存先: ./result.png (周波数と周期が書き込まれていません)')
 plt.savefig('result.png')
 
 plt.figure(figsize = (12, 3*len(y)))
@@ -153,19 +153,28 @@ for i in range(len(y)):
     plt.tick_params(labelbottom=False)
     plt.ylim((-2.5, 7.5))
     index = 0
-    while (y[i][index] < 5):
-        index += 1
-    fs = index
-    while (y[i][index] > 0):
-        index += 1
-    while (y[i][index] < 5):
-        index += 1
-    fe = index
-
-    while (y[i][fs] < 2.5):
-        fs += 1
-    while (y[i][fs] < 2.5):
-        fe += 1
+    if (y[i][index] < 2.5):
+        while (y[i][index] < 5):
+            index += 1
+        fs = index
+        while (y[i][index] > 0):
+            index += 1
+        while (y[i][index] < 5):
+            index += 1
+        fe = index
+    else:
+        while (y[i][index] > 0):
+            index += 1
+        fs = index
+        while (y[i][index] < 5):
+            index += 1
+        while (y[i][index] > 0):
+            index += 1
+        fe = index
+    while (y[i][fs] > 2.5):
+        fs -= 1
+    while (y[i][fs] > 2.5):
+        fe -= 1
     p1 = plt.vlines([x[fs]], -2.5, 7.5, "black", linestyles='dashed')
     p2 = plt.vlines([x[fe]], -2.5, 7.5, "black", linestyles='dashed')
     plt.text(x[fe], 6, "T={:3.2f}[{:s}s], f={:3.2f}[{:s}Hz]".format(x[fe]-x[fs], cs[c], 1000 / (x[fe]-x[fs]) , cb[c-2]), size=15)
@@ -174,7 +183,7 @@ for i in range(len(y)):
 plt.tick_params(labelbottom=True)
 plt.xlabel("time [{:s}s]".format(cs[c]))
 
-print('作成完了 保存先: ./result2.png')
+print('作成完了 保存先: ./result2.png (周波数と周期が書き込まれています)')
 plt.savefig('result2.png')
 
 print("Successed!")
